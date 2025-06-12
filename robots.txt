@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Allow: /css/
+Allow: /images/
+
+Allow: /pages/
+
+Sitemap: https://cumbriacleaningco.co.uk/sitemap.xml
+
