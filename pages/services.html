@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services & Prices | Cumbria Cleaning Co.</title>
-    <meta name="description" content="Professional carpet and upholstery cleaning services in Cumbria, South Scotland and Northwest England. View our competitive pricing for carpet cleaning, upholstery cleaning, stain removal and more.">
+    <meta name="description" content="Transform your home with professional carpet & upholstery cleaning in Cumbria, South Scotland & NW England. Get a free quote today for stain removal, deep cleaning & competitive prices!">
     <meta name="keywords" content="carpet cleaning prices Carlisle, upholstery cleaning costs, stain removal Cumbria, professional cleaning services prices">
     <meta name="author" content="Greg Corbett">
     <meta name="geo.region" content="GB-CMA">
@@ -15,6 +15,25 @@
     <meta property="og:description" content="Professional carpet and upholstery cleaning services with competitive pricing in Cumbria, South Scotland and Northwest England">
     <meta property="og:type" content="business.business">
     <meta property="og:locale" content="en_GB">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Services & Prices - Cumbria Cleaning Co.",
+      "description": "Professional carpet and upholstery cleaning services and pricing in Cumbria, South Scotland and Northwest England.",
+      "url": "https://cumbriacleaningco.co.uk/pages/services.html",
+      "inLanguage": "en-GB",
+      "mainEntity": {
+        "@type": "Service",
+        "name": "Professional Carpet and Upholstery Cleaning",
+        "provider": {
+          "@id": "https://cumbriacleaningco.co.uk/#business"
+        },
+        "areaServed": ["Cumbria", "South Scotland", "Northwest England", "Carlisle"]
+      }
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,12 +43,36 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="manifest" href="../site.webmanifest">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied'
+        });
+        
+        gtag('js', new Date());
+        gtag('config', 'G-WZ1BH091QD');
+    </script>    
 </head>
 <body>
+    <div id="cookieBanner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #333; color: white; padding: 15px; text-align: center; z-index: 1000; display: none;">
+        <p style="margin: 0 0 10px 0;">We use cookies to analyse website traffic and improve your experience. By accepting, you consent to our use of cookies for analytics.</p>
+        <button onclick="acceptCookies()" style="background: #007cba; color: white; border: none; padding: 10px 20px; margin: 0 5px; cursor: pointer; border-radius: 4px;">Accept</button>
+        <button onclick="rejectCookies()" style="background: #666; color: white; border: none; padding: 10px 20px; margin: 0 5px; cursor: pointer; border-radius: 4px;">Reject</button>
+    </div>
     <header>
         <nav class="container">
-            <a href="../index.html" class="logo">
-                <img src="../images/logo.png" alt="Cumbria Cleaning Co. Logo">
+            <a href="index.html" class="logo">
+                <picture>
+                    <source srcset="../images/logo-80.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="../images/logo-120.webp" media="(min-width: 769px)" type="image/webp">
+                    <img src="../images/logo-80.png" 
+                         alt="Cumbria Cleaning Co. Logo" 
+                         width="80" 
+                         height="71"
+                         loading="eager">
+                </picture>
                 Cumbria Cleaning Co.
             </a>
             <div class="menu-toggle" id="menuToggle">
@@ -209,7 +252,12 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-left">
-                    <img src="../images/logo.png" alt="Cumbria Cleaning Co. Logo" class="footer-logo" style="height: 30px; width: auto;">
+                    <img src="../images/logo-30.webp" 
+                         alt="Cumbria Cleaning Co. Logo" 
+                         class="footer-logo" 
+                         width="30" 
+                         height="27"
+                         loading="lazy">
                     <div class="footer-legal">
                         <a href="privacy-policy.html">Privacy Policy</a>
                         <a href="terms-of-service.html">Terms of Service</a>
@@ -248,6 +296,39 @@
                 }
             });
         });
+
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (consent === null) {
+                document.getElementById('cookieBanner').style.display = 'block';
+            } else if (consent === 'accepted') {
+                loadAnalytics();
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').style.display = 'none';
+            loadAnalytics();
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
+
+        function loadAnalytics() {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+            
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WZ1BH091QD';
+            document.head.appendChild(script);
+        }
+
+        checkCookieConsent();
     </script>
 </body>
 </html>
