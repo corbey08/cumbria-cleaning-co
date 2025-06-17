@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Reviews & Testimonials | Cumbria Cleaning Co.</title>
-    <meta name="description" content="Read genuine customer reviews for Cumbria Cleaning Co. 5-star rated carpet and upholstery cleaning services across Cumbria. See what our satisfied customers say!">
+    <meta name="description" content="See why Cumbria Cleaning Co. is 5-star rated! Read genuine customer reviews for our professional carpet & upholstery cleaning across Cumbria & NW England.">
     <meta name="keywords" content="carpet cleaning reviews Carlisle, upholstery cleaning testimonials Cumbria, 5 star carpet cleaners, satisfied customers">
     <meta name="author" content="Greg Corbett">
     <meta name="geo.region" content="GB-CMA">
@@ -15,6 +15,57 @@
     <meta property="og:description" content="Read genuine 5-star reviews from satisfied customers across Carlisle and Cumbria.">
     <meta property="og:type" content="business.business">
     <meta property="og:locale" content="en_GB">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Customer Reviews & Testimonials | Cumbria Cleaning Co.",
+      "description": "See why Cumbria Cleaning Co. is 5-star rated! Read genuine customer reviews for our professional carpet & upholstery cleaning across Cumbria & NW England.",
+      "url": "https://cumbriacleaningco.co.uk/pages/testimonials.html",
+      "inLanguage": "en-GB",
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "@id": "https://cumbriacleaningco.co.uk/#business",
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Happy Customer"
+            },
+            "datePublished": "2024-12-15",
+            "reviewBody": "Tod was amazing with our flat carpet clean. We had 3 rooms to do and he did it with such professionalism, had a family event coming up and they needed done desperately, we got booked in no bother, would definitely recommend Cumbria Cleaning Co.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Stephen"
+            },
+            "datePublished": "2024-12-10", 
+            "reviewBody": "Great job on my carpets and sofa by Cumbria Cleaning Co 100% recommend to get your house looking fresh",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "2",
+          "bestRating": "5"
+        }
+      }
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,12 +75,36 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="manifest" href="../site.webmanifest">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied'
+        });
+        
+        gtag('js', new Date());
+        gtag('config', 'G-WZ1BH091QD');
+    </script>
 </head>
 <body>
+    <div id="cookieBanner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #333; color: white; padding: 15px; text-align: center; z-index: 1000; display: none;">
+        <p style="margin: 0 0 10px 0;">We use cookies to analyse website traffic and improve your experience. By accepting, you consent to our use of cookies for analytics.</p>
+        <button onclick="acceptCookies()" style="background: #007cba; color: white; border: none; padding: 10px 20px; margin: 0 5px; cursor: pointer; border-radius: 4px;">Accept</button>
+        <button onclick="rejectCookies()" style="background: #666; color: white; border: none; padding: 10px 20px; margin: 0 5px; cursor: pointer; border-radius: 4px;">Reject</button>
+    </div>
     <header>
         <nav class="container">
-            <a href="../index.html" class="logo">
-                <img src="../images/logo.png" alt="Cumbria Cleaning Co. Logo">
+            <a href="index.html" class="logo">
+                <picture>
+                    <source srcset="../images/logo-80.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="../images/logo-120.webp" media="(min-width: 769px)" type="image/webp">
+                    <img src="../images/logo-80.png" 
+                         alt="Cumbria Cleaning Co. Logo" 
+                         width="80" 
+                         height="71"
+                         loading="eager">
+                </picture>
                 Cumbria Cleaning Co.
             </a>
             <div class="menu-toggle" id="menuToggle">
@@ -120,7 +195,12 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-left">
-                    <img src="../images/logo.png" alt="Cumbria Cleaning Co. Logo" class="footer-logo" style="height: 30px; width: auto;">
+                    <img src="../images/logo-30.webp" 
+                         alt="Cumbria Cleaning Co. Logo" 
+                         class="footer-logo" 
+                         width="30" 
+                         height="27"
+                         loading="lazy">
                     <div class="footer-legal">
                         <a href="privacy-policy.html">Privacy Policy</a>
                         <a href="terms-of-service.html">Terms of Service</a>
@@ -159,6 +239,39 @@
                 }
             });
         });
+
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (consent === null) {
+                document.getElementById('cookieBanner').style.display = 'block';
+            } else if (consent === 'accepted') {
+                loadAnalytics();
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').style.display = 'none';
+            loadAnalytics();
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
+
+        function loadAnalytics() {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+            
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WZ1BH091QD';
+            document.head.appendChild(script);
+        }
+
+        checkCookieConsent();
     </script>
 </body>
 </html>
