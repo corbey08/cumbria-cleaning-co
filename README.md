@@ -1,3 +1,7 @@
+![Cumbria Cleaning Co. Homepage Screenshot](images/homepage.png)
+![Cumbria Cleaning Co. Services Page Screenshot](images/services-page.png)
+![Cumbria Cleaning Co. Contact Links Screenshot](images/contact-form.png)
+
 📝 Description
 This project is the official website for Cumbria Cleaning Co., a local cleaning service based in Cumbria, UK. The website was designed and developed to establish a professional online presence for the company, providing potential customers with essential information about their services, pricing, and contact options.
 
