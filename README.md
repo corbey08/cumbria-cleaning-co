@@ -42,7 +42,7 @@ SEO Best Practices: Implementation of sitemap.xml and robots.txt.
 
 📁 Project Structure
 
-'''bash
+```bash
 .
 ├── images/                     # Directory for various images and logos used throughout the site
 ├── css/                        # Stylesheet directory
@@ -59,7 +59,7 @@ SEO Best Practices: Implementation of sitemap.xml and robots.txt.
 ├── robots.txt                  # Instructions for web crawlers (e.g., search engines)
 ├── sitemap.xml                 # XML sitemap to help search engines crawl the site
 └── site.webmanifest            # Web app manifest for progressive web app features
-'''
+```
 
 💡 What I Learned
 Client Communication: Gaining experience in translating client requirements into a functional web presence.
